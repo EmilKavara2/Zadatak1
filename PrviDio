@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std;
+
+string funkcija(string rijec, int n){
+    string modifikovana_rijec=rijec.substr(0,n);
+    return modifikovana_rijec;
+}
+
+string star_wars_Generator(string param1,string param2){
+    return param1+param2;
+    
+}
+
+int main()
+{
+    string ime,prezime,md_prezime,grad;
+    cout<<"Unesite vaše ime"<<endl;
+    cin>>ime;
+    cout<<"Unesite vaše prezime"<<endl;
+    cin>>prezime;
+    cout<<"Unesite djevojačko prezime vaše majke"<<endl;
+    cin>>md_prezime;
+    cout<<"Unesite ime grada u kojem ste rođeni"<<endl;
+    cin>>grad;
+    string mod_ime=funkcija(ime,3);
+    string mod_prezime=funkcija(prezime,2);
+    string mod_MDprezime=funkcija(md_prezime,2);
+    string mod_grad=funkcija(grad,3);
+    string star_wars_ime=star_wars_Generator(mod_ime,mod_prezime);
+    string star_wars_prezime=star_wars_Generator(mod_MDprezime,mod_grad);
+    cout<<"Vaše star wars ime je "<<star_wars_ime<<endl;
+    cout<<"Vaše star wars prezime je "<<star_wars_prezime<<endl;
+}
+
+

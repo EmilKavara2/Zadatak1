@@ -11,6 +11,26 @@ string star_wars_Generator(string param1,string param2){
     
 }
 
+void racunanje(int pocetak,int kraj){
+    double result;
+    
+    for(int x=pocetak;x<=kraj;x++){
+        
+    result= (x*x) + 2*x + 5;
+    cout<<"Kada je x jednako "<<x<<" rjesenje je "<<result<<"."<<endl;
+    
+    
+    }
+   
+}
+
+void ispis_imena(string ime,string prezime){
+    
+     cout<<"Vaše star wars ime je "<<ime<<endl;
+    cout<<"Vaše star wars prezime je "<<prezime<<endl;
+    
+}
+
 int main()
 {
     string ime,prezime,md_prezime,grad;
@@ -28,8 +48,11 @@ int main()
     string mod_grad=funkcija(grad,3);
     string star_wars_ime=star_wars_Generator(mod_ime,mod_prezime);
     string star_wars_prezime=star_wars_Generator(mod_MDprezime,mod_grad);
-    cout<<"Vaše star wars ime je "<<star_wars_ime<<endl;
-    cout<<"Vaše star wars prezime je "<<star_wars_prezime<<endl;
+   ispis_imena(star_wars_ime,star_wars_prezime);
+    racunanje(0,5);
 }
+
+
+
 
 
